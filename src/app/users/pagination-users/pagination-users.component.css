@@ -1,0 +1,13 @@
+.foot {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  margin-right: 23%;
+}
+
+.paginator {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+}

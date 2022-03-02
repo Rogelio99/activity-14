@@ -1,0 +1,41 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+  <div class="flex-xl-nowrap">
+    <h2>Publicaciones</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Id de usuario</th>
+          <th>Titulo</th>
+          <th>Descripcion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let post of actualPosts">
+          <td>{{post.id}}</td>
+          <td>{{post.userId}}</td>
+          <td>{{post.title}}</td>
+          <td>{{post.body}}</td>
+          <td>
+            <button class="btn btn-primary" (click)="openDetail(post.id)">Editar</button>
+            <button class="btn btn-danger" (click)="delete(post.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5">
+            <div class="pagination-posts">
+              <button class="btn btn-primary paginator" (click)="previousPage()" [disabled]="page === 0">Anterior</button>
+              <button class="btn btn-primary foot" (click)="nextPage()" [disabled]="page === (totalPages - 1)">Siguiente</button>
+              <span class="foot">Pagina {{page + 1}} de {{totalPages}}</span>
+              <button class="btn btn-primary foot" (click)="openDetail(0)">Agregar</button>
+            </div>
+
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

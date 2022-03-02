@@ -1,0 +1,19 @@
+div {
+  background-color: #05a8aa;
+}
+nav {
+  background-color: #05a8aa;
+}
+
+.navItem {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  display: inline;
+}
+
+.navItem:hover{
+  background-color: #fff;
+  color: #05a8aa;
+}

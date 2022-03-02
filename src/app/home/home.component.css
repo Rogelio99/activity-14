@@ -1,0 +1,14 @@
+.list-item {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background-color: #05a8aa;
+  color: #fff;
+}

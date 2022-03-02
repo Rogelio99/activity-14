@@ -1,0 +1,46 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+  <div class="flex-xl-nowrap">
+    <h2>Publicaciones</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th>Email</th>
+          <th>Direccion</th>
+          <th>Telefono</th>
+          <th>Sitio web</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of actualUsers">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td>
+            {{concatData(user.address)}}
+          </td>
+          <td>
+            {{user.phone}}
+          </td>
+          <td>
+            {{user.website}}
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="5">
+            <div class="pagination-posts">
+              <button class="btn btn-primary paginator" (click)="previousPage()" [disabled]="page === 0">Anterior</button>
+              <button class="btn btn-primary foot" (click)="nextPage()" [disabled]="page === (totalPages - 1)">Siguiente</button>
+              <span class="foot">Pagina {{page + 1}} de {{totalPages}}</span>
+            </div>
+
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>

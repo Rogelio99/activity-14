@@ -1,0 +1,22 @@
+<div>
+  <p>{{error}}</p>
+  <form class="form-inline" [formGroup]="formCheckout" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-2">
+      <label for="staticEmail2" class="sr-only">Id</label>
+      <input class="form-control" type="text" aria-label="100" id="id" formControlName="id" readonly>
+    </div>
+    <div class="form-group mb-2">
+      <label for="staticEmail2" class="sr-only">Id de usuario</label>
+      <input class="form-control" type="text" aria-label="100" id="userId" formControlName="userId" [required]="true" >
+    </div>
+    <div class="form-group mb-2">
+      <label for="staticEmail2" class="sr-only">Titulo</label>
+      <input class="form-control" type="text" aria-label="100" id="title" formControlName="title" [required]="true" >
+    </div>
+    <div class="form-group mb-2">
+      <label for="staticEmail2" class="sr-only">Description</label>
+      <input class="form-control" type="text" aria-label="1" id="body" formControlName="body" [required]="true">
+    </div>
+    <button type="submit" id="id" class="btn btn-primary mb-2">{{post?.id?"Actualizar":"Guardar"}}</button>
+  </form>
+</div>
