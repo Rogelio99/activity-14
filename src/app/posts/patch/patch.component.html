@@ -1,0 +1,11 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <p>{{error}}</p>
+  <form class="form-inline" [formGroup]="formCheckout" (ngSubmit)="onSubmit()">
+    <div class="form-group mb-2">
+      <label for="staticEmail2" class="sr-only">Titulo</label>
+      <input class="form-control" type="text" aria-label="100" id="title" formControlName="title" [required]="true" >
+    </div>
+    <button type="submit" id="id" class="btn btn-primary mb-2">Actualizar</button>
+  </form>
+</div>

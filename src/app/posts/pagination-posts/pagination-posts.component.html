@@ -19,6 +19,7 @@
           <td>{{post.body}}</td>
           <td>
             <button class="btn btn-primary" (click)="openDetail(post.id)">Editar</button>
+            <button class="btn btn-warning" (click)="editTitle(post.id)">Editar titulo</button>
             <button class="btn btn-danger" (click)="delete(post.id)">Eliminar</button>
           </td>
         </tr>

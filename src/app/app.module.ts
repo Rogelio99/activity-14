@@ -11,6 +11,7 @@ import { PaginationUsersComponent } from './users/pagination-users/pagination-us
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PatchComponent } from './posts/patch/patch.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PaginationPhotosComponent,
     PaginationUsersComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    PatchComponent
   ],
   imports: [
     BrowserModule,

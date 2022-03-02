@@ -42,6 +42,10 @@ export class PaginationPostsComponent implements OnInit {
     window.location.href = "/posts/"+id;
   }
 
+  editTitle(id: number) {
+    window.location.href = "/posts/"+id+"/editTitle";
+  }
+
   async delete(id:number){
     if(window.confirm('Seguro que deseas eliminar este registro?')) {
       await this.postServices.deletePost(id)

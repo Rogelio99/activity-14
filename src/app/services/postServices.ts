@@ -36,7 +36,7 @@ export class PostsServices {
   }
 
   async updateTitle(id: number, title: string) {
-    return await axios.put(this.urlPosts + "/" + id, {title: title})
+    return await axios.patch(this.urlPosts + "/" + id, {title: title})
     .then((response: { data: any}) => response.data)
     .catch((error: any) => console.log(error));
   }

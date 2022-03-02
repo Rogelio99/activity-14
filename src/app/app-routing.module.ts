@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { PaginationPhotosComponent } from './photos/pagination-photos/pagination-photos.component';
 import { DetailPostComponent } from './posts/detail-post/detail-post.component';
 import { PaginationPostsComponent } from './posts/pagination-posts/pagination-posts.component';
+import { PatchComponent } from './posts/patch/patch.component';
 import { PaginationUsersComponent } from './users/pagination-users/pagination-users.component';
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'posts/:id',
     component: DetailPostComponent
+  },
+  {
+    path: 'posts/:id/editTitle',
+    component: PatchComponent
   },
   {
     path: 'users',
